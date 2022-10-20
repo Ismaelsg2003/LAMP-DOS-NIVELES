@@ -14,9 +14,9 @@
 ![](FOTOS/1.png)
 ### En este fichero cambiaremos la *bind-address* y pondremos la ip de nuestra maquina sql.
 ![](FOTOS/2.png)
-### Ahora entramos a mysql como root y creamos un usuario con la ip de apache y le damos todos los permisos.
+### Ahora entramos a mysql como root y creamos un usuario con la ip de la maquina apache y le daremos todos los permisos en la base de datos que deseemos.
 ![](FOTOS/3.png)
-### En el home de esta maquina volvemos a clonar el repositorio de git para poder descargar la base de datos.
+### En el home de esta maquina clonaremos el repositorio de git para poder descargar la base de datos.
 ![](FOTOS/4.png)
 ### Ahora entraremos a la carpeta creada y dentro de esta accederemos a db. Despues de esto en el fichero *database.sql* borraremos las ultimas 3 lineas y la aplicaremos a nuestro MySQL.
 ![](FOTOS/5.png)
