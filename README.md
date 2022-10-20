@@ -9,6 +9,20 @@
 ### Una vez configurado todo, ponemos **vagrant up** y se empezaran a levantar ambas maquinas. Para comprobar que no han habido errores al iniciar las maquinas con el comando **vagrant status** podemos ver el estado de estas.
 ![](FOTOS/VagrantStatus.png)
 
+# Configuracion MySQL
+### Lo primero que hay que hacer es entrar en el directorio */etc/mysql/mariadb.conf.d* y ahí modificar el fichero *50-server.cnf*.
+![](FOTOS/1.png)
+### En este fichero cambiaremos la *bind-address* y pondremos la ip de nuestra maquina sql.
+![](FOTOS/2.png)
+### Ahora entramos a mysql como root y creamos un usuario con la ip de apache y le damos todos los permisos.
+![](FOTOS/3.png)
+### En el home de esta maquina volvemos a clonar el repositorio de git para poder descargar la base de datos.
+![](FOTOS/4.png)
+### Ahora entraremos a la carpeta creada y dentro de esta accederemos a db. Despues de esto en el fichero *database.sql* borraremos las ultimas 3 lineas y la aplicaremos a nuestro MySQL.
+![](FOTOS/5.png)
+### Una vez importada la base de datos podemos borrar la carpeta iaw-practica-lamp.
+![](FOTOS/6.png)
+
 # Configuracion APACHE
 ### Creamos una carpeta en */var/www* y le cambiamos el propietario con **chown**. Despues clonamos el repositorio de github con **git clone** y el enlace del repositorio que queremos usar.
 ![](FOTOS/1a.png)
@@ -32,17 +46,3 @@
 ![](FOTOS/10a.png)
 ### Ahora si ponemos la dirección de la maquina de apache en Google saldrá la pagina del LAMP.
 ![](FOTOS/11a.png)
-
-# Configuracion MySQL
-### Lo primero que hay que hacer es entrar en el directorio */etc/mysql/mariadb.conf.d* y ahí modificar el fichero *50-server.cnf*.
-![](FOTOS/1.png)
-### En este fichero cambiaremos la *bind-address* y pondremos la ip de nuestra maquina sql.
-![](FOTOS/2.png)
-### Ahora entramos a mysql como root y creamos un usuario con la ip de apache y le damos todos los permisos.
-![](FOTOS/3.png)
-### En el home de esta maquina volvemos a clonar el repositorio de git para poder descargar la base de datos.
-![](FOTOS/4.png)
-### Ahora entraremos a la carpeta creada y dentro de esta accederemos a db. Despues de esto en el fichero *database.sql* borraremos las ultimas 3 lineas y la aplicaremos a nuestro MySQL.
-![](FOTOS/5.png)
-### Una vez importada la base de datos podemos borrar la carpeta iaw-practica-lamp.
-![](FOTOS/6.png)
